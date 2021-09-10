@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_blue_bright"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="@string/imc"
+        tools:visibility="visible"
+        android:textSize="48sp"
+        app:layout_anchor="@+id/peso"
+        app:layout_anchorGravity="top|center"
+        />
+
+    <EditText
+        android:id="@+id/peso"
+        style="@style/input_style"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="@string/peso_ex_82_3_kg" />
+
+    <EditText
+        android:id="@+id/altura"
+        style="@style/input_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/peso"
+        android:hint="@string/altura_ex_1_79_m"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/altura"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="242dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:padding="15dp"
+        android:text="@string/calcular"
+        android:textSize="16dp"
+        tools:visibility="visible" />
+
+</RelativeLayout>
